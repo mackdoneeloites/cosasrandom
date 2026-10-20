@@ -1,0 +1,533 @@
+.ember-wl {
+    --bg: #151513;
+    --panel: #20201d;
+    --panel2: #292721;
+    --ink: #f4ebdf;
+    --line: #514438;
+    --accent: #ff873c;
+    --accent2: #e0a46d;
+    --fuente: "Oswald";
+    --parrafo: "Inter";
+    width: 820px;
+    max-width: 100%;
+    margin: 28px auto;
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: var(--parrafo), sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.ember-wl * {
+    box-sizing: border-box;
+    transition: all 0.7s ease-in-out;
+    position: relative;
+}
+
+.ember-wl a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ember-wl p {
+    margin: 0 0 14px
+}
+
+.ember-wl p:last-child {
+    margin-bottom: 0
+}
+
+.ember-wl input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ew-head {
+    background: radial-gradient(ellipse at 80% 10%, #b9562b55, transparent 46%), linear-gradient(135deg, var(--panel), var(--bg));
+    padding: 30px 35px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ew-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.ew-heading span {
+    font-weight: 700;
+    font-family: var(--fuente), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 110px;
+    line-height: 100px;
+    padding-bottom: 20px;
+    text-shadow: 5px 5px var(--bg), 7px 7px var(--accent);
+    color: var(--accent2);
+}
+
+.ew-heading em {
+    color: var(--accent);
+    letter-spacing: -2px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 65px;
+}
+
+.ew-stamp {
+    width: 100px;
+    height: 100px;
+    font-size: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    rotate: -5deg;
+    margin-top: -40px;
+    mix-blend-mode: overlay;
+}
+
+.ew-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0px -33px;
+    background: var(--bg);
+    padding: 20px 15px 0;
+    border-top: 1px solid var(--line);
+}
+
+.ew-tabs label {
+    flex: 1;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    letter-spacing: .5px;
+    border-radius: 25px;
+    font-family: var(--parrafo), sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.ew-tabs label:hover {
+    border-color: var(--accent);
+}
+
+#ew-about:checked~.ew-head label[for=ew-about],
+#ew-ships:checked~.ew-head label[for=ew-ships],
+#ew-worlds:checked~.ew-head label[for=ew-worlds],
+#ew-plots:checked~.ew-head label[for=ew-plots] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+    font-weight: 900;
+}
+
+.ew-page {
+    display: none;
+    padding: 20px;
+    max-height: 820px;
+    overflow: auto;
+}
+
+#ew-about:checked~.ew-pages .ew-about,
+#ew-ships:checked~.ew-pages .ew-ships,
+#ew-worlds:checked~.ew-pages .ew-worlds,
+#ew-plots:checked~.ew-pages .ew-plots {
+    display: block;
+}
+
+.ew-lead {
+    display: grid;
+    grid-template-columns: 1.45fr .8fr;
+    gap: 16px;
+}
+
+.ew-textbox,
+.ew-note,
+.ew-worldbox {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 22px;
+}
+
+.ew-textbox {
+    height: 305px;
+    overflow: auto;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.ew-textbox span {
+    margin: 0 0 15px;
+    line-height: 1.15;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 30px;
+    font-family: var(--fuente), sans-serif;
+    color: var(--accent);
+}
+
+.ew-textbox strong,
+.ew-textbox b {
+    color: var(--accent);
+}
+
+.ew-profile {
+    border: 1px solid var(--accent);
+}
+
+.ew-profile:before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: var(--bg);
+    mix-blend-mode: color;
+}
+
+.ew-profile:after,
+.ew-mood:before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(359deg, var(--accent), var(--bg));
+    mix-blend-mode: multiply;
+    z-index: 1;
+}
+
+.ew-facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px
+}
+
+.ew-fact {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    padding: 15px;
+    line-height: 1.25;
+}
+
+.ew-fact b {
+    display: block;
+    color: var(--accent);
+    font-weight: 400;
+    font-size: 14px;
+    font-family: var(--fuente), sans-serif;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.ew-fact span {
+    font-size: 13px;
+    padding: 0 10px;
+    display: block;
+}
+
+.ew-subhead {
+    margin: 18px 15px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: var(--fuente), sans-serif;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.ew-legend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px
+}
+
+.ew-legend>div {
+    padding: 10px 15px;
+    border: 1px dashed var(--line);
+    background: var(--panel);
+    font-size: 13px
+}
+
+.ew-legend b {
+    color: var(--accent);
+    margin-right: 5px
+}
+
+.ew-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+}
+
+.ew-note {
+    border: 2px solid var(--accent2);
+    font-size: 13px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.ew-note.none {
+    border: 2px solid var(--line)
+}
+
+.ew-note span {
+    font-weight: 500;
+    font-size: 15px;
+    font-family: var(--fuente), sans-serif;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    display: block;
+}
+
+.ew-fandoms {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.ew-fandom {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    min-width: 0;
+}
+
+.ew-fandom span {
+    padding: 5px 15px;
+    background: #30251e;
+    border-bottom: 1px solid var(--line);
+    color: var(--accent);
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: var(--fuente), sans-serif;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.ew-fandom ln {
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+    display: block;
+}
+
+.ew-fandom ln:last-child {
+    border-bottom: 0
+}
+
+.ew-fandom ln b {
+    color: var(--accent)
+}
+
+.ew-fandom ln i {
+    color: var(--accent2)
+}
+
+.ew-category {
+    margin-bottom: 24px
+}
+
+.ew-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.ew-chips span {
+    padding: 5px 10px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    font-size: 13px;
+    border-radius: 25px;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+
+.ew-worldgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px
+}
+
+.ew-worldbox>span {
+    padding: 0;
+    color: var(--accent);
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: var(--fuente), sans-serif;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+.ew-worldbox tx {
+    padding-right: 3px;
+    margin: 0;
+    height: 225px;
+    display: block;
+    overflow: auto;
+}
+
+.ew-worldbox tx>span {
+    padding: 3px 0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ew-worldbox tx>span:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 100%;
+}
+
+.ew-plot {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    margin-bottom: 22px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ew-plot:last-child {
+    margin-bottom: 0
+}
+
+.ew-mood {
+    display: grid;
+    grid-template-columns: 1.55fr 1.2fr 1fr;
+    height: 200px;
+    background: #0e0f0d;
+    overflow: hidden;
+}
+
+.ew-mood:after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(0deg, var(--panel), transparent);
+    z-index: 1;
+}
+
+.ew-mood img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(.75) contrast(1.1);
+    display: block;
+}
+
+.ew-plotbody {
+    padding: 0 25px 25px;
+}
+
+.ew-plotmeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent);
+    margin-top: -50px;
+    z-index: 1;
+}
+
+.ew-plotmeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent);
+    margin-top: -50px;
+    z-index: 1;
+}
+
+.ew-plotmeta>span {
+    font-size: 40px;
+    font-family: var(--fuente), sans-serif;
+    text-transform: uppercase;
+}
+
+span.ew-status {
+    border: 1px solid var(--accent);
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--parrafo), sans-serif;
+    border-radius: 15px;
+}
+
+.ew-plot .ew-tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 0 0 15px
+}
+
+.ew-tags span {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-family: var(--parrafo), sans-serif;
+    padding: 5px 9px;
+    background: #3a3027;
+    color: var(--accent2);
+    border-radius: 10px;
+}
+
+.ew-plotbody>p {
+    line-height: 1.95;
+    margin: 0;
+}
+
+.ew-plotnote {
+    margin-top: 20px;
+    background: #302820;
+    border: 1px solid var(--accent);
+    padding: 15px;
+    font-size: 13px;
+    color: #f3d7c1;
+}
+
+.ew-footer {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background: var(--panel2);
+    border-top: 1px solid var(--line);
+    padding: 8px 20px;
+    font-size: 12px;
+}
+
+.ew-footer strong,
+.ew-plotnote strong,
+.ew-plotnote b {
+    color: var(--accent)
+}
+
+.ember-wl br {
+    display: none;
+}
+
+.ew-textbox br,
+.ew-plotbody br {
+    display: inline;
+}
