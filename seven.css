@@ -331,12 +331,12 @@ body.light-mode .ember-wl {
 .ew-fandom ln {
     padding: 5px 10px;
     border-bottom: 1px solid var(--line);
-    font-size: 13px;
+    font-size: 13.5px;
     display: block;
 }
 
-.ew-fandom ln:last-child {
-    border-bottom: 0
+.ew-fandom ln:last-of-type {
+    border: none;
 }
 
 .ew-fandom ln b, .ew-fandom ln strong {
@@ -345,6 +345,10 @@ body.light-mode .ember-wl {
 
 .ew-fandom ln i {
     color: var(--accent2)
+}
+
+.ew-fandom ln>sm {
+    font-size: 9.5px;
 }
 
 .ew-category {
