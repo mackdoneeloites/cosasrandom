@@ -339,7 +339,7 @@ body.light-mode .ember-wl {
     border-bottom: 0
 }
 
-.ew-fandom ln b {
+.ew-fandom ln b, .ew-fandom ln strong {
     color: var(--accent)
 }
 
