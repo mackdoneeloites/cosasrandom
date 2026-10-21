@@ -501,10 +501,11 @@ span.ew-status {
     letter-spacing: 1.5px;
     font-weight: 700;
     font-family: var(--parrafo), sans-serif;
-    padding: 5px 9px;
+    padding: 4px 10px;
     background: #3a3027;
     color: var(--accent2);
     border-radius: 10px;
+    text-transform: uppercase;
 }
 
 .ew-plotbody>p {
