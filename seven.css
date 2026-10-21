@@ -450,6 +450,7 @@ body.light-mode .ember-wl {
 
 .ew-plotbody {
     padding: 0 25px 25px;
+    text-align: justify;
 }
 
 .ew-plotmeta {
