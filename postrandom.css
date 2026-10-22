@@ -140,8 +140,7 @@
     display: block;
     color: var(--acento);
     letter-spacing: 2px;
-    font-size: 8px;
-    margin-bottom: 2px;
+    font-size: 9px;
     font-weight: 900;
 }
 
@@ -332,7 +331,7 @@
 .ire-postfoot strong,
 .ire-postfoot small {
     display: block;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: .5px;
 }
 
@@ -341,8 +340,7 @@
 }
 
 .ire-postfoot small {
-    font-size: 9px;
-    margin-top: 6px;
+    font-size: 10px;
     font-weight: 800;
     color: var(--acento);
     text-transfor: uppercase;
