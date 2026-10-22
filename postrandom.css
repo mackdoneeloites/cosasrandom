@@ -89,6 +89,10 @@
     font-weight: 700;
 }
 
+.ire-cover-f span{
+    line-height: 45px;
+}
+
 .ire-cover-f p,
 .ire-postf p {
     font-size: 12px;
@@ -306,7 +310,7 @@
 .ire-postf span {
     font-size: 28px;
     letter-spacing: -1px;
-    margin: 0 0 10px
+    line-height: 32px;
 }
 
 .ire-post-cover p {
