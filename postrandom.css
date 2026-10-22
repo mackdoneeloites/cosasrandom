@@ -1,0 +1,574 @@
+.ire {
+    --rgb: 0, 0, 0;
+    --rgbb: 255, 255, 255;
+    --text: #ddd;
+    --bg: #151515;
+    --bgc: #1a1a1a;
+    border: 1px solid rgba(var(--rgb), .5);
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    isolation: isolate;
+    width: 550px;
+    margin: 50px auto;
+}
+
+.light-mode .ire {
+    --rgbb: 0, 0, 0;
+    --rgb: 255, 255, 255;
+    --text: #2d2d2d;
+    --bg: #f1f1f1;
+    --bgc: #efefef;
+}
+
+.ire * {
+    box-sizing: border-box;
+    position: relative;
+    transition: all .7s ease-in-out;
+}
+
+.ire-top {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ire-t-m,
+.ire-b-m {
+    position: absolute;
+    z-index: 5;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(var(--rgb), .7);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--text);
+    background: var(--bkgr1);
+    font-size: 28px;
+}
+
+.ire-t-m {
+    top: -25px
+}
+
+.ire-b-m {
+    bottom: -25px
+}
+
+.ire-cover:before,
+.ire-post-cover:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(var(--rgb), .5);
+    pointer-events: none;
+}
+
+.ire-cover-f,
+.ire-postf {
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(var(--rgb), .4);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    padding: 15px;
+}
+
+.ire-cover-f span,
+.ire-postf span {
+    letter-spacing: -2px;
+    margin: 0;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.ire-cover-f p,
+.ire-postf p {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.ire-cover-f p {
+    letter-spacing: 2px;
+    font-size: 10px
+}
+
+.ire-kicker {
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #e7eeee
+}
+
+.ire-cover {
+    height: 250px;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.ire-meta {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr 1fr;
+    border-top: 1px solid rgba(var(--rgb), .5);
+    border-bottom: 1px solid rgba(var(--rgb), .5);
+    padding: 15px 8px;
+    text-align: center;
+}
+
+.ire-meta span {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.ire-meta span+span {
+    border-left: 1px solid rgba(var(--rgb), .5);
+}
+
+.ire-meta small {
+    display: block;
+    color: var(--acento);
+    letter-spacing: 2px;
+    font-size: 8px;
+    margin-bottom: 2px;
+    font-weight: 900;
+}
+
+.ire-text,
+.ire-postt {
+    border: 1px solid rgba(var(--rgb), .5);
+    background: var(--bgc);
+    padding: 20px;
+    text-align: justify;
+    margin: 15px;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    line-height: 20px;
+}
+
+.ire-cast {
+    display: flex;
+    gap: 15px;
+    padding: 0 17px 15px;
+    flex-wrap: wrap;
+}
+
+.ire-pj {
+    width: 249px;
+}
+
+.ire-photo {
+    height: 150px;
+    background-position: center 35%;
+    background-size: cover;
+    position: relative;
+    outline: 1px solid rgba(var(--rgb), .5);
+}
+
+.ire-photo:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;
+    mix-blend-mode: color;
+}
+
+.ire-photo:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, var(--acento), rgba(var(--rgb), .5));
+    mix-blend-mode: multiply;
+}
+
+.ire-name {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--acento);
+}
+
+.ire-data {
+    border-top: 1px solid rgba(var(--rgb), .5);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 8px;
+    letter-spacing: 1px
+}
+
+.ire-data>span {
+    border-top: 1px solid rgba(var(--rgb), .25);
+    margin: 0 8px;
+    font-size: 11px;
+    text-align: center;
+    padding: 5px 0 0;
+}
+
+.ire-data>span:first-of-type {
+    border-top: none;
+}
+
+.ire-data>span b,
+.ire-data>span strong {
+    color: var(--acento);
+}
+
+.ire-crono {
+    border-top: 1px solid rgba(var(--rgb), .5);
+}
+
+.ire-crono a {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(var(--rgb), .25);
+    padding: 15px;
+}
+
+.ire-crono a:last-of-type {
+    border: none;
+}
+
+.ire-crono a span {
+    color: var(--acento);
+    letter-spacing: 2px;
+    font-size: 9px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.ire-crono a strong {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.ire-crono a:hover strong {
+    text-decoration: underline;
+    opacity: 0.3;
+}
+
+.ire-foot {
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ire-foot span:nth-child(2) {
+    font: 26px 'Italiana', serif
+}
+
+.ire-post {
+    width: 450px;
+}
+
+.ire-post .ire-top {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 5.5px;
+    letter-spacing: .55px
+}
+
+.ire-post .ire-medallion,
+.ire-post .ire-b-m {
+    width: 38px;
+    height: 38px;
+    font-size: 22px
+}
+
+.ire-post .ire-medallion {
+    top: -19px
+}
+
+.ire-post .ire-b-m {
+    bottom: -19px
+}
+
+.ire-post-cover {
+    height: 170px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(var(--rgb), .5);
+}
+
+.ire-postf span {
+    font-size: 28px;
+    letter-spacing: -1px;
+    margin: 0 0 10px
+}
+
+.ire-post-cover p {
+    font-size: 10px
+}
+
+.ire-postfoot {
+    display: flex;
+    gap: 2px;
+    text-align: center;
+    border-top: 1px solid rgba(var(--rgb), .5);
+}
+
+.ire-postfoot>div {
+    flex: 1;
+    padding: 15px;
+}
+
+.ire-postfoot strong,
+.ire-postfoot small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: .5px;
+}
+
+.ire-postfoot strong {
+    font-weight: 500;
+}
+
+.ire-postfoot small {
+    font-size: 9px;
+    margin-top: 6px;
+    font-weight: 800;
+    color: var(--acento);
+    text-transfor: uppercase;
+}
+
+.ire br,
+.nr br {
+    display: none;
+}
+
+.nr-prose br,
+.ire-text br,
+.ire-postt br {
+    display: inline;
+}
+
+.nr {
+    overflow: hidden;
+    width: 480px;
+    margin: 15px auto;
+    color: var(--txt);
+    font-family: var(--texto);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    --fuente: Merriweather, serif;
+    --texto: "Asap Sharp", sans-serif;
+    --acento: var(--accent);
+    --acentob: hsl(from var(--acento) calc(h + 25) s l);
+    --rgb: 0, 0, 0;
+    --nrgb: 255, 255, 255;
+    --txt: #ddd;
+    --bg: #151515;
+    --bgc: #222;
+    --line: #292929;
+}
+
+.light-mode .nr {
+    --nrgb: 0, 0, 0;
+    --rgb: 255, 255, 255;
+    --txt: #393939;
+    --bg: #f1f1f1;
+    --bgc: #efefef;
+    --line: #e5e5e5;
+}
+
+.nr * {
+    box-sizing: border-box;
+    position: relative;
+    transition: all .7s ease-in-out;
+}
+
+.nr-hero {
+    background: linear-gradient(45deg, var(--acento), var(--acentob));
+    border-radius: 12px;
+    min-height: 265px;
+    padding: 30px 15px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+}
+
+.nr-avatar {
+    width: 65px;
+    height: 65px;
+    padding: 10px;
+    outline: 10px solid rgba(var(--nrgb), 0.5);
+    box-shadow: 0 0 0 2px rgba(var(--nrgb), 0.5);
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px
+}
+
+.nr-hero>span {
+    text-transform: uppercase;
+    margin: 0;
+    font-family: var(--fuente);
+    font-size: 21px;
+    font-weight: 900;
+    line-height: 25px;
+}
+
+.nr-hero>em {
+    letter-spacing: 1px;
+    font-family: var(--fuente);
+    font-size: 12px;
+    line-height: 20px;
+    opacity: .9;
+}
+
+.nr-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 320px;
+    margin: 10px;
+}
+
+.nr-tags>span {
+    background: var(--bg);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-family: var(--texto);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px
+}
+
+.nr-card {
+    background: var(--bgc);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.nr-prose {
+    font-family: arial, sans-serif;
+    font-size: 13.5px;
+    line-height: 20px;
+    text-align: justify;
+    letter-spacing: .5px;
+}
+
+.nr-open {
+    width: 520px
+}
+
+.nr-pers {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.nr-pj {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: var(--line);
+}
+
+.nr-photo {
+    width: 80px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid var(--line);
+}
+
+.nr-pj>div {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nr-pj>div>span {
+    font-family: var(--fuente);
+    font-size: 21px;
+    font-weight: 900;
+    line-height: 25px;
+}
+
+.nr-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px
+}
+
+.nr-facts>span {
+    background: var(--bgc);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-family: var(--texto);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px
+}
+
+.nr-facts b,
+.nr-facts strong,
+.nr-pj>div>span b,
+.nr-pj>div>span strong {
+    color: var(--acento);
+    font-weight: 600;
+}
+
+.nr-pj:nth-child(2n of .nr-pj) {
+    flex-direction: row-reverse;
+}
+
+.nr-pj:nth-child(2n of .nr-pj) div {
+    align-items: self-end;
+}
+
+.nr-chapters {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nr-chapters a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 10px;
+    text-decoration: none;
+    font-family: var(--texto);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 15px;
+    background: var(--line);
+    color: var(--text);
+}
+
+.nr-chapters a:hover {
+    color: var(--acento);
+    background: var(--bgc);
+}
+
+.nr-chapters i {
+    font-family: var(--fuente);
+    color: var(--acentob);
+    font-weight: 800;
+}
