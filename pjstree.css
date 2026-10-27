@@ -253,7 +253,7 @@ padding: 8px;
 .ta-list span {
 background: var(--panel2);
 border: 1px solid var(--line);
-padding: 2.5px 8px;
+padding: 2.5px 6px;
 border-radius: 10px;
 color: #d5dfd2;
 overflow-wrap: anywhere;
