@@ -197,6 +197,74 @@ a.fca-link:hover {
     color: var(--panel);
 }
 
+.ta-gallery {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+gap: 15px
+}
+
+.ta-card {
+width: 100%;
+background: var(--panel);
+border: 1px solid var(--line);
+font-family: var(--parrafo), sans-serif;
+font-size: 12px;
+padding:15px;
+border-radius: 20px;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+}
+
+.ta-card:hover,.ta-list span:hover {
+border-color: var(--accent);
+}
+
+.ta-fandom {
+color: var(--accent);
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+.ta-pair {
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+font-family: var(--fuente), sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin:5px 0;
+}
+
+.ta-pair b {
+font-weight: 400;
+color: var(--accent);
+}
+
+.ta-list {
+margin: 0;
+display: flex;
+gap: 8px;
+flex-wrap: wrap;
+padding: 8px;
+}
+
+.ta-list span {
+background: var(--panel2);
+border: 1px solid var(--line);
+padding: 2.5px 8px;
+border-radius: 10px;
+color: #d5dfd2;
+overflow-wrap: anywhere;
+text-align:center;
+flex:auto;
+}
+
+.ta-list span strong,.ta-list span b {
+color: var(--accent2);
+}
+
 .fca br {
     display: none;
 }
