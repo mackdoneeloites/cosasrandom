@@ -8,9 +8,9 @@
 --accent2: #e0a46d;
 --fuente: "Oswald";
 --parrafo: "Inter";
---open: #b7d29d;
---drop: #e0a18d;
---done: #a9b8db;
+--open: #7ebe41;
+--drop: #b45f44;
+--done: #4567b6;
 width: 820px;
 margin: 10px auto;
 padding: 30px;
@@ -28,13 +28,13 @@ overflow: hidden;
 }
 
 body.light-mode .tidx {
-    --bg: #fafafa;
-    --panel: #eee;
-    --panel2: #e5e5e5;
-    --ink: #222;
-    --line: #ddb998;
-    --accent: #db702c;
-    --accent2: #df9552;
+--bg: #fafafa;
+--panel: #eee;
+--panel2: #e5e5e5;
+--ink: #222;
+--line: #ddb998;
+--accent: #db702c;
+--accent2: #df9552;
 }
 
 .tidx * {
