@@ -1,0 +1,202 @@
+.fca {
+    --bg: #151513;
+    --panel: #20201d;
+    --panel2: #292721;
+    --ink: #f4ebdf;
+    --line: #514438;
+    --accent: #ff873c;
+    --accent2: #e0a46d;
+    --fuente: "Oswald";
+    --parrafo: "Inter";
+    --open: #b7d29d;
+    --drop: #e0a18d;
+    --done: #a9b8db;
+    width: 840px;
+    margin: 10px auto;
+    padding: 30px;
+    background: var(--bg);
+    background: radial-gradient(ellipse at 80% 10%, #b9562b55, transparent 46%), linear-gradient(135deg, var(--panel), var(--bg));
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: var(--parrafo), sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body.light-mode .fca {
+    --bg: #fafafa;
+    --panel: #eee;
+    --panel2: #e5e5e5;
+    --ink: #222;
+    --line: #ddb998;
+    --accent: #db702c;
+    --accent2: #df9552;
+}
+
+.fca * {
+    box-sizing: border-box;
+    transition: all 0.7s ease-in-out;
+    position: relative;
+}
+
+.fca a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.fca a:hover {
+    color: var(--accent);
+}
+
+.fca-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.fca-head>span {
+    font-weight: 700;
+    font-family: var(--fuente), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 80px;
+    line-height: 100px;
+    text-shadow: 5px 5px var(--bg);
+}
+
+.fca-head>span>b {
+    color: var(--accent);
+}
+
+.fca-nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 0 0 20px;
+    justify-content: end;
+}
+
+.fca-pill {
+    padding: 6px 13px;
+    border-radius: 999px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    font-family: var(--parrafo), sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.fca-pill b {
+    color: var(--accent);
+    margin-right: 2.5px;
+}
+
+.fca-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.fca-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    font-family: var(--parrafo), sans-serif;
+    font-size: 12px;
+    width: 251px;
+    overflow: hidden;
+}
+
+.fca-card:hover {
+    border-color: var(--accent2);
+}
+
+.fca-photo {
+    min-height: 174px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center11;
+    border-bottom: 1px solid var(--line);
+}
+
+.fca-photo:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #111c1599, transparent 60%);
+    pointer-events: none
+}
+
+.fca-number {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 11px;
+    color: var(--accent);
+    font-size: 18px;
+}
+
+.fca-content {
+    padding: 15px;
+    min-width: 0
+}
+
+.fca-top>span {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: var(--fuente), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    display: block;
+}
+
+.fca-meta {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.fca-meta>span {
+    background: var(--panel2);
+    border: 1px solid var(--line);
+    padding: 1.5px 6px;
+    border-radius: 10px;
+}
+
+.fca-meta>span>b {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+a.fca-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    padding: 2.5px 10px;
+    background: var(--accent);
+    border: 1px solid var(--line);
+    color: var(--panel);
+    font-weight: 800;
+}
+
+a.fca-link:hover {
+    background: var(--accent2);
+    color: var(--panel);
+}
+
+.fca br {
+    display: none;
+}
